@@ -1,0 +1,71 @@
+<section class="reviews-wrap">
+  <div class="container">
+    <h2 class="section-title">Our Students Words Speaks For Us</h2>
+
+    <div class="reviews-grid">
+      <!-- LEFT: institute panel -->
+      <aside class="brand-panel">
+        <div class="brand-row">
+          <img class="brand-logo" src="assets/logo.png" alt="Ujwal Academy">
+          <div>
+            <h3>Ujwal Academy – Software Training Institude {{ city }}</h3>
+          </div>
+        </div>
+
+        <div class="rating-row">
+          <span class="stars">
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </span>
+        </div>
+
+        <p class="review-count">25+ Google reviews</p>
+
+        <a class="btn btn-outline-dark rounded-pill write-btn"
+           href="https://www.google.com/maps/place/Ujwal+Academy/@20.9271846,77.7650898,17z/data=!4m16!1m9!3m8!1s0x3bd6a55db7272ba9:0xf07a97f288a78d9e!2sUjwal+Academy!8m2!3d20.9271796!4d77.7676647!9m1!1b1!16s%2Fg%2F11wp12ypph!3m5!1s0x3bd6a55db7272ba9:0xf07a97f288a78d9e!8m2!3d20.9271796!4d77.7676647!16s%2Fg%2F11wp12ypph?entry=ttu&g_ep=EgoyMDI1MDkwNy4wIKXMDSoASAFQAw%3D%3D"
+           target="_blank" rel="noopener">
+          Write a review
+        </a>
+      </aside>
+
+      <!-- REVIEW CARDS -->
+      <article class="review-card" *ngFor="let r of reviews; let i = index">
+        <header class="card-head">
+          <img *ngIf="r.avatar; else initials"
+               class="avatar" [src]="r.avatar" [alt]="r.name" />
+          <ng-template #initials>
+            <div class="avatar avatar-initials">{{ initialOf(r.name) }}</div>
+          </ng-template>
+
+          <div class="meta">
+            <div class="name">{{ r.name }}</div>
+            <div class="date">{{ r.date }}</div>
+          </div>
+
+          <i class="bi bi-google google-badge" aria-hidden="true"></i>
+        </header>
+
+        <div class="stars-line">
+          <span class="stars">
+            <ng-container *ngFor="let s of stars; let si = index">
+              <i class="bi" [ngClass]="si < r.rating ? 'bi-star-fill' : 'bi-star'"></i>
+            </ng-container>
+          </span>
+          <i class="bi bi-patch-check-fill verify" aria-hidden="true"></i>
+        </div>
+
+        <!-- clamp when not expanded -->
+        <p class="body" [class.clamp]="!r.expanded">
+          {{ r.text }}
+        </p>
+
+        <button class="readmore" type="button" (click)="toggle(i)">
+          {{ r.expanded ? 'Hide' : 'Read more' }}
+        </button>
+      </article>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,78 @@
+/* breadcrumb (left, under navbar) */
+.breadcrumb-bar {
+  width: 100%;
+  padding: .5rem 2rem 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.bc {
+  font-size: .9rem; color: #4a5568;
+  a { color: #2b6cb0; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .sep { margin: 0 .35rem; color: #718096; }
+}
+
+/* constrain page width consistently */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.all-courses { padding: 1.25rem 0 2.25rem; }
+
+/* hero (reference layout) */
+.hero {
+  display: grid; grid-template-columns: 1.1fr .9fr;
+  gap: 1rem; align-items: center; margin-bottom: 1rem;
+
+  .hero-text h1 { font-size: 1.7rem; font-weight: 800; margin: 0 0 .35rem; line-height: 1.15; }
+  .hero-text p  { color: #445; margin: 0; }
+  .hero-img img { width: 100%; border-radius: 10px; }
+}
+
+/* course rows */
+.list { display: grid; gap: 1rem; }
+
+.row-card {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1rem;
+  background: #e8f4ff;                        /* same soft blue */
+  border: 1px solid rgba(0,0,0,.06);
+  border-radius: 12px;
+  padding: .75rem;
+}
+
+/* left blue slab */
+.slab {
+  border-radius: 10px;
+  /* gradient similar to reference */
+  background: radial-gradient(140% 140% at 20% 20%, #0d6efd 0%, #0a58ca 70%);
+  color: #fff;
+  padding: .65rem;
+}
+.slab-inner {
+  border-radius: 10px;
+  background: rgba(255,255,255,.08);
+  height: 100%;
+  padding: .8rem;
+  display: grid;
+  align-content: start;
+  gap: .5rem;
+
+  img { width: 42px; height: 42px; object-fit: contain; filter: brightness(0) invert(1); }
+  .slab-title { font-size: .95rem; font-weight: 700; line-height: 1.25; }
+  .pill { align-self: end; width: fit-content; border-radius: 999px; padding: .25rem .7rem; }
+}
+
+/* right info area */
+.info .title {
+  font-weight: 700; color: #123; text-decoration: none; display: inline-block; margin-bottom: .35rem;
+}
+.info .title:hover { text-decoration: underline; }
+.info .excerpt { color: #3b4253; margin: 0 0 .5rem; }
+
+/* responsive */
+@media (max-width: 992px) { .hero { grid-template-columns: 1fr; } }
+@media (max-width: 576px) { .row-card { grid-template-columns: 1fr; } }

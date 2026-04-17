@@ -1,0 +1,57 @@
+.reviews-wrap { padding: 0.5rem 0; background: #fff; }
+
+.section-title {
+  text-align: center; font-weight: 800; color: #213547; margin-bottom: 1.5rem;
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 320px repeat(3, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.brand-panel {
+  background: #ffffff; border-radius: 16px; padding: 1.25rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,.06); border: 1px solid rgba(0,0,0,.06);
+
+  .brand-row { display: flex; align-items: center; gap: .6rem; margin-bottom: .65rem; }
+  .brand-logo { height: 36px; width: auto; }
+  h3 { font-size: 1rem; margin: 0; color: #1b2838; font-weight: 700; }
+  .rating-row { margin: .25rem 0 .35rem; }
+  .stars i { color: #f5b301; font-size: 1.05rem; }
+  .review-count { color: #5a6b7a; margin: .25rem 0 .8rem; }
+  .write-btn { padding: .45rem .9rem; font-weight: 600; border-radius: 999px; border-color: #1b2838; }
+}
+
+.review-card {
+  background: #f7f9fb; border: 1px solid rgba(0,0,0,.06);
+  border-radius: 16px; padding: 1rem; box-shadow: 0 4px 14px rgba(0,0,0,.05);
+
+  .card-head { display: flex; align-items: center; gap: .7rem; margin-bottom: .4rem; }
+  .avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .avatar-initials { width: 40px; height: 40px; border-radius: 50%; background: #f1f5ff; color: #3b5bdb; display: grid; place-items: center; font-weight: 800; }
+  .meta .name { font-weight: 700; color: #1b2838; line-height: 1; }
+  .meta .date { font-size: .85rem; color: #61707f; }
+  .google-badge { margin-left: auto; color: #4285f4; font-size: 1.2rem; }
+
+  .stars-line { display: flex; align-items: center; gap: .45rem; margin: .35rem 0 .5rem; }
+  .stars-line .stars i { color: #f5b301; }
+  .stars-line .verify { color: #0ea5e9; }
+
+  .body { color: #233043; font-size: .95rem; margin: 0 0 .25rem; }
+  /* key: clamp to 3 lines when not expanded */
+  .clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-clamp: 3;
+  }
+
+  .readmore { background: transparent; border: 0; color: #6b7785; font-weight: 600; padding: 0; }
+}
+
+/* Responsive */
+@media (max-width: 1200px) { .reviews-grid { grid-template-columns: 280px 1fr 1fr; } }
+@media (max-width: 992px)  { .reviews-grid { grid-template-columns: 1fr; } .brand-panel { order: -1; } }

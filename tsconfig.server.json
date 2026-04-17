@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc-server",
+    "baseUrl": "./",
+    "module": "es2020",
+    "target": "es2022",
+    "moduleResolution": "bundler",
+    "types": ["node", "express"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true
+  },
+  "files": ["src/main.server.ts"]
+}

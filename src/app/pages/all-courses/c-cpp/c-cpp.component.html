@@ -1,0 +1,52 @@
+<section class="cpp-intro">
+  <div class="container">
+    <h2 class="title">C & C++ Course Overview</h2>
+    <p class="text">{{ intro }}</p>
+  </div>
+</section>
+
+<section class="cpp-features">
+  <div class="container">
+    <h3 class="subtitle">Key Features Of C & C++ Programming Course</h3>
+
+    <div class="grid">
+      <article class="card" *ngFor="let f of features">
+        <div class="icon"><i [class]="f.icon"></i></div>
+        <h5 class="title">{{ f.title }}</h5>
+        <p class="text">{{ f.text }}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<app-why-ujwal></app-why-ujwal>
+
+<section class="faq">
+  <div class="container">
+    <h2 class="faq-title">{{ title }}</h2>
+
+    <div class="faq-list">
+      <div class="faq-item" *ngFor="let f of faqs; let i = index">
+        <!-- pill question row -->
+        <button
+          type="button"
+          class="faq-head"
+          [class.open]="f.open"
+          [attr.aria-expanded]="f.open ? 'true' : 'false'"
+          (click)="toggle(i)"
+        >
+          <span class="q">{{ f.q }}</span>
+          <span class="icon" aria-hidden="true">
+            <span *ngIf="!f.open">+</span>
+            <span *ngIf="f.open">−</span>
+          </span>
+        </button>
+
+        <!-- answer -->
+        <div class="faq-body" *ngIf="f.open">
+          <p class="a">{{ f.a }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+

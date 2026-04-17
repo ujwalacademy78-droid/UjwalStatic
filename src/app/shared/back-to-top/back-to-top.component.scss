@@ -1,0 +1,35 @@
+/* Default (desktop & tablet) */
+
+@use 'sass:color';
+
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,.2);
+  transition: opacity .3s ease;
+
+  &:hover {
+    background: color.adjust(#d6efbd, $lightness: -5%);
+  }
+}
+
+/* Mobile view fix */
+@media (max-width: 767.98px) {
+  .back-to-top {
+    bottom: 80px; /* ⬅ move it UP so it stays above social bar */
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,133 @@
+.cpp-intro {
+  max-width: 1200px;
+  margin: 2rem auto;
+//   text-align: center;
+
+  .title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .text {
+    color: #555;
+    line-height: 1.6;
+  }
+}
+
+.cpp-features {
+  margin: 3rem auto;
+  .subtitle {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .card {
+    background: #f8fbff;
+    padding: 1.25rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    }
+
+    .icon {
+      font-size: 2rem;
+      color: #0066cc;
+      margin-bottom: 1rem;
+    }
+
+    .title {
+      font-weight: 600;
+      margin-bottom: .5rem;
+    }
+
+    .text {
+      color: #666;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+// FAQ styling
+
+/* page width to match rest of site */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+/* title like the reference */
+.faq-title {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f2742;
+  margin: 1rem 0 1.25rem;
+}
+
+/* wrapper and spacing */
+.faq-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: .85rem;
+}
+
+/* pill header row */
+.faq-head {
+  width: 100%;
+  background: #eef7ff;
+  border: 1px solid #d6ebff;
+  color: #0f2742;
+  border-radius: 9999px;          /* pill shape */
+  padding: .95rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  text-align: left;
+  transition: background .15s ease, border-color .15s ease;
+}
+
+.faq-head.open {
+  background: #cfe8ff;            /* light blue when open (like reference) */
+  border-color: #b8dcff;
+}
+
+.faq-head .q {
+  font-weight: 600;
+}
+
+.faq-head .icon {
+  font-size: 1.25rem;
+  line-height: 1;
+  width: 1.5rem;
+  text-align: center;
+  color: #0f2742;
+}
+
+/* answer area */
+.faq-body {
+  padding: .9rem 1.25rem 1.2rem;
+}
+
+.faq-body .a {
+  margin: 0;
+  color: #2b3542;
+  line-height: 1.85;
+}
+
+/* responsive */
+@media (max-width: 576px) {
+  .faq-title { font-size: 1.35rem; }
+  .faq-head { padding: .8rem 1rem; }
+}

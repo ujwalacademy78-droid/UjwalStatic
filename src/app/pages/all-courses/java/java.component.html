@@ -1,0 +1,58 @@
+<section class="java-features">
+  <div class="container">
+
+    <!-- Highlights -->
+    <h3 class="heading">{{ heading }}</h3>
+    <p class="intro">
+      {{ intro }}
+    </p>
+
+    <!-- Subheading -->
+    <h4 class="subheading">{{ subheading }}</h4>
+
+    <!-- Features grid -->
+    <div class="grid">
+      <article class="card" *ngFor="let f of features">
+        <div class="icon">
+          <i class="bi" [ngClass]="f.icon"></i>
+        </div>
+        <h5 class="title">{{ f.title }}</h5>
+        <p class="text">{{ f.text }}</p>
+      </article>
+    </div>
+
+  </div>
+  
+</section>
+
+<app-why-ujwal></app-why-ujwal>
+
+<section class="faq">
+  <div class="container">
+    <h2 class="faq-title">{{ title }}</h2>
+
+    <div class="faq-list">
+      <div class="faq-item" *ngFor="let f of faqs; let i = index">
+        <!-- pill question row -->
+        <button
+          type="button"
+          class="faq-head"
+          [class.open]="f.open"
+          [attr.aria-expanded]="f.open ? 'true' : 'false'"
+          (click)="toggle(i)"
+        >
+          <span class="q">{{ f.q }}</span>
+          <span class="icon" aria-hidden="true">
+            <span *ngIf="!f.open">+</span>
+            <span *ngIf="f.open">−</span>
+          </span>
+        </button>
+
+        <!-- answer -->
+        <div class="faq-body" *ngIf="f.open">
+          <p class="a">{{ f.a }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+

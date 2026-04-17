@@ -1,0 +1,36 @@
+<section class="our-team">
+  <div class="container">
+    <h2 class="page-title">{{ title }}</h2>
+    <p class="page-subtitle">{{ subtitle }}</p>
+
+    <!-- Teacher Profiles -->
+    <div class="teacher-grid">
+      <div class="teacher-card" *ngFor="let t of teachers">
+        <div class="teacher-image">
+          <img [src]="t.image" [alt]="t.name" />
+        </div>
+        <h3 class="name">{{ t.name }}</h3>
+        <p class="role">{{ t.role }}</p>
+      </div>
+    </div>
+
+    <!-- Common Experties -->
+    <div class="common-section">
+      <h3 class="section-title">Our Experties & Qualities</h3>
+      <ul>
+        <li *ngFor="let e of experties">{{ e }}</li>
+      </ul>
+    </div>
+
+    <!-- Common Services -->
+    <div class="common-section">
+      <h3 class="section-title">Our Services</h3>
+      <ul>
+        <li *ngFor="let s of services">{{ s }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <app-stats></app-stats>
+</section>
+

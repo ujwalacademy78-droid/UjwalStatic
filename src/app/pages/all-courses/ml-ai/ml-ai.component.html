@@ -1,0 +1,45 @@
+<section class="ml-ai container">
+  <div class="intro">
+    <h2 class="title">Machine Learning &amp; AI Training</h2>
+    <p class="lead">{{ intro }}</p>
+  </div>
+
+  <div class="features">
+    <!-- optional short features block -->
+    <div class="feature-card">
+🎓 Comprehensive Curriculum
+</div>
+    <div class="feature-card">🧑‍🏫 Expert Faculty</div>
+    <div class="feature-card">💻 Hands-On Projects</div>
+    <div class="feature-card">⏳ Flexible Learning Options</div>
+  </div>
+
+  <app-why-ujwal></app-why-ujwal>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h3 class="faq-heading">FAQ's</h3>
+
+    <div class="faq-list">
+      <div class="faq-item" *ngFor="let f of faqs; let i = index">
+        <button
+          type="button"
+          class="faq-q"
+          (click)="toggleFaq(i)"
+          [attr.aria-expanded]="f.open ? 'true' : 'false'"
+        >
+          <span class="q-text">{{ f.q }}</span>
+          <span class="q-icon" aria-hidden="true">
+            <!-- minus when open, plus when closed -->
+            <ng-container *ngIf="f.open">−</ng-container>
+            <ng-container *ngIf="!f.open">+</ng-container>
+          </span>
+        </button>
+
+        <div class="faq-a" *ngIf="f.open">
+          <p [innerHTML]="f.a"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

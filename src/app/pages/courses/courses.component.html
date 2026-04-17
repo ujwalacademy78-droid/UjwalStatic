@@ -1,0 +1,25 @@
+<div class="courses-container">
+  <h2 class="section-title">Our IT Programming Job-Oriented Courses</h2>
+  <p class="section-subtitle">
+    Gain hands-on experience, learn from industry experts, and secure job placement 
+    in top IT companies. Explore our full stack, web, and embedded courses below.
+  </p>
+
+  <div class="courses-grid">
+    <!-- Loop through courses dynamically -->
+    <div class="course-card" *ngFor="let c of courses">
+      <div class="icon">{{ c.icon }}</div>
+      <h3>{{ c.title }}</h3>
+      <p>{{ c.excerpt }}</p>
+
+      <!-- Use anchor styled as button -->
+      <a class="btn" [routerLink]="['/courses', c.slug]" routerLinkActive="active">
+        Know More →
+      </a>
+    </div>
+  </div>
+
+  <div class="see-all">
+    <a routerLink="/all-courses">See All Courses →</a>
+  </div>
+</div>

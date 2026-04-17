@@ -1,0 +1,111 @@
+.container { max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+
+/* Highlights (same style as Java page) */
+.gd-highlights {
+  padding: 1rem 0 1.25rem;
+  text-align: center;
+
+  .hl-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #0f2742;
+    margin-bottom: .6rem;
+  }
+
+  .hl-intro {
+    max-width: 1200px;
+    margin: 0 auto .9rem;
+    color: #445163;
+    line-height: 1.8;
+    text-align: left;
+  }
+
+  .hl-more {
+    display: inline-block;
+    margin-top: .25rem;
+    color: #0d6efd;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+  }
+}
+
+/* Features grid (match Java) */
+.gd-features {
+  padding: 1rem 0 2rem;
+
+  .subheading {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+    color: #0f2742;
+    margin: .5rem 0 1rem;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    @media (max-width: 992px) { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 576px) { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: #e8f4ff;
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 14px;
+    padding: 1rem;
+    min-height: 170px;
+    text-align: center;
+
+    .icon {
+      width: 54px; height: 54px;
+      border-radius: 12px;
+      margin: 0 auto .6rem;
+      display: grid; place-items: center;
+      color: #0d6efd;
+      background: #d6ecff;
+      i { font-size: 1.4rem; }
+    }
+
+    .title {
+      font-weight: 700;
+      color: #0f2742;
+      margin: 0 0 .35rem;
+      font-size: 1rem;
+    }
+
+    .text {
+      color: #445163;
+      margin: 0;
+      font-size: .95rem;
+      line-height: 1.55;
+    }
+  }
+}
+
+/* FAQ (same pill style) */
+.gd-faq {
+  padding: 1.25rem 0 2rem;
+
+  .subheading { text-align: center; font-weight: 800; color: #0f2742; margin-bottom: 1rem; }
+
+  .faq-list { max-width: 900px; margin: 0 auto; display: grid; gap: .85rem; }
+
+  .faq-head {
+    width: 100%;
+    background: #eef7ff;
+    border: 1px solid #d6ebff;
+    color: #0f2742;
+    border-radius: 9999px;
+    padding: .95rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  .faq-head.open { background: #cfe8ff; border-color: #b8dcff; }
+  .faq-body { padding: .75rem 1.25rem 1.25rem; }
+  .faq-body .a { margin: 0; color: #2b3542; line-height: 1.85; }
+}

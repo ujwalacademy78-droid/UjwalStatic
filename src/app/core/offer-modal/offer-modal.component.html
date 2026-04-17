@@ -1,0 +1,27 @@
+<!-- show only when needed -->
+<div class="offer-overlay" *ngIf="show" role="dialog" aria-modal="true" (click)="close()">
+  <!-- stop click propagation when clicking inside card -->
+  <div class="offer-card" (click)="$event.stopPropagation()">
+
+    <button class="offer-close" aria-label="Close offer" (click)="close()">✕</button>
+
+    <!-- Poster image -->
+    <div class="offer-media">
+      <!-- replace with your poster file path (optimize for web, e.g. webp) -->
+      <img src="assets/offer1.jpeg" alt="Limited time offer — Ujwal Academy" />
+    </div>
+
+    <!-- optional text / buttons -->
+    <div class="offer-body">
+      <h3 class="offer-title">Limited Time Offer — Free Counselling & Discount</h3>
+      <p class="offer-desc">
+        Enroll now and get a free counselling session & early-bird discount on selected courses.
+      </p>
+
+      <div class="offer-actions">
+        <a class="btn primary" href="/contact">Get Free Counselling</a>
+        <a class="btn ghost" href="https://wa.me/919409999999" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</div>

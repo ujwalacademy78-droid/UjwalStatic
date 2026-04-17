@@ -1,0 +1,62 @@
+/* keep global resets/utilities light; most CSS should live in component SCSS */
+
+@use "sass:color";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+
+html, body {
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', sans-serif;
+  color: #0f2742;           /* base text color */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --c-text: #0f2742;
+  --c-subtle: #445163;
+  --c-accent: #0d6efd;
+  --container: 1200px;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+
+
+img{ max-width:100%; height:auto; display:block; }
+button{ font:inherit; }
+
+
+/* Global fix: remove extra gap below navbar */
+.ua-navbar {
+  margin-bottom: 0 !important;
+}
+
+/* All pages hero section closer to navbar */
+.hero {
+  margin-top: 0;
+  padding-top: 0.5rem; /* adjust or set 0 if you want flush */
+}
+
+.hero h1 {
+  margin-top: 0;
+}
+
+main.container {
+  padding-top: 0.5rem !important;  /* reduce default py-4 (24px) → 8px */
+}
+
+h1, h2 {
+  margin-top: 0.5rem; /* reduce heading top space */
+}
+
+.breadcrumb-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: .5rem 1rem 0;
+  display: flex;
+  justify-content: flex-start; /* 👈 right aligned */
+}

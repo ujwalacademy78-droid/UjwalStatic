@@ -1,0 +1,7 @@
+<nav class="bc" aria-label="Breadcrumb" *ngIf="crumbs?.length">
+  <a routerLink="/">Home</a>
+  <ng-container *ngFor="let c of crumbs">
+    <span class="sep">»</span>
+    <a [routerLink]="c.url">{{ c.label }}</a>
+  </ng-container>
+</nav>

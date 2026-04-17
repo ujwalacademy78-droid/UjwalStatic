@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top ua-navbar">
+  <div class="container">
+    <!-- Brand -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="assets/logo.png" alt="Ujwal Academy logo"/>
+    </a>
+
+    <!-- Toggler (mobile) -->
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLink="/"
+             data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show"
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" routerLink="/all-courses" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" routerLinkActive="active">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/our-teams-detail" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" routerLinkActive="active">Our-Teams</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/about-details" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show" routerLinkActive="active">About</a></li>
+        <!-- <li class="nav-item"><a class="nav-link" routerLink="/branches" routerLinkActive="active">Branches</a></li>
+        <li class="nav-item"><a class="nav-link" routerLink="/blog" routerLinkActive="active">Blog</a></li> -->
+      </ul>
+
+      <!-- Call button (right) -->
+      <a class="btn btn-info text-white fw-bold ms-lg-4 call-btn" href="tel:+919422662371">
+        📞 9422662371
+      </a>
+    </div>
+  </div>
+</nav>

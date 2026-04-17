@@ -1,0 +1,60 @@
+/* Colors per network */
+$fb: #1877f2;
+$ig: #e1306c;
+$yt: #ff0000;
+$li: #0a66c2;
+$wa: #25d366;
+$call: #0d6efd;
+
+/* Desktop: vertical right side */
+.social-bar {
+  position: fixed;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1050; /* above content, below navbar if needed */
+}
+
+.btn-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+  text-decoration: none;
+  font-size: 20px;
+  color: #222;
+
+  &.fb { color: $fb; }
+  &.ig { color: $ig; }
+  &.yt { color: $yt; }
+  &.li { color: $li; }
+  &.wa { color: $wa; }
+  &.call { color: $call; }
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+}
+
+/* Mobile: convert to bottom sticky row */
+@media (max-width: 767.98px) {
+  .social-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 12px;
+    top: auto;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    gap: 12px;
+  }
+}

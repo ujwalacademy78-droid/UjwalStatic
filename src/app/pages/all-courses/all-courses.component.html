@@ -1,0 +1,46 @@
+<section class="all-courses">
+ 
+
+  <div class="container">
+    <!-- hero split (left text, right image) -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1 [innerHTML]="hero.heading"></h1>
+        <p>{{ hero.text }}</p>
+      </div>
+      <div class="hero-img">
+        <img [src]="hero.img" alt="Students learning">
+      </div>
+    </div>
+
+    <!-- dynamic rows from TS array -->
+    <div class="list">
+      <article class="row-card" *ngFor="let c of courses">
+        <div class="slab">
+          <div class="slab-inner">
+            <img [src]="c.icon" [alt]="c.slabTitle" />
+            <div class="slab-title">{{ c.slabTitle }}</div>
+
+            <!-- use routerLink if detail exists; href works too -->
+            <a class="btn btn-light btn-sm pill" [routerLink]="['/courses', c.slug]">
+              See Details
+            </a>
+          </div>
+        </div>
+
+        <div class="info">
+          <a class="title" [routerLink]="['/courses', c.slug]">{{ c.title }}</a>
+          <p class="excerpt">{{ c.excerpt }}</p>
+          <a class="btn btn-outline-primary btn-sm rounded-pill"
+             [routerLink]="['/courses', c.slug]">
+            See Details
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<app-why-ujwal></app-why-ujwal>
+<app-reviews></app-reviews>
+<app-stats></app-stats>

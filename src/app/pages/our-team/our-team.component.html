@@ -1,0 +1,67 @@
+<!-- <div class="our-team-container"> -->
+  <!-- Section Title -->
+  <!-- <h2 class="section-title">Our Team</h2> -->
+
+  <!-- <div class="our-team-grid"> -->
+    <!-- Left side: 2x2 photos -->
+    <!-- <div class="team-photos">
+      <div class="team-card" *ngFor="let member of teamMembers">
+        <img [src]="member.image" [alt]="member.name" />
+        <div class="team-info">
+          <h3>{{ member.name }}</h3>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Right side: Point-wise description -->
+    <!-- <div class="team-description">
+      <ul>
+        <li>Our leadership team is dedicated to providing quality education and driving innovation.</li>
+        <li>They bring expertise in various technologies, ensuring top-quality training for every learner.</li>
+        <li>We foster an environment that promotes growth, learning, and career success.</li>
+        <li>Our strong industry connections help students secure top job opportunities.</li>
+        <li>With personalized mentoring and doubt-solving sessions, we focus on career-oriented development.</li>
+        <li>Many of our trainers have real-time project experience across different domains.</li>
+        <li>The team includes highly experienced professionals from diverse technical backgrounds.</li>
+      </ul>
+    </div>
+  </div>
+</div> -->
+
+<section class="our-team">
+  <div class="container">
+    <h2 class="page-title">{{ title }}</h2>
+    <p class="page-subtitle">{{ subtitle }}</p>
+
+    <!-- Teacher Profiles -->
+    <div class="teacher-grid">
+      <div class="teacher-card" *ngFor="let t of teachers">
+        <div class="teacher-image">
+          <img [src]="t.image" [alt]="t.name" />
+        </div>
+        <h3 class="name">{{ t.name }}</h3>
+        <p class="role">{{ t.role }}</p>
+      </div>
+    </div>
+    
+      <div class="see-all">
+    <a routerLink="/our-teams-detail">See All details →</a>
+  </div>
+
+    <!-- Common Experties -->
+    <!-- <div class="common-section">
+      <h3 class="section-title">Our Experties & Qualities</h3>
+      <ul>
+        <li *ngFor="let e of experties">{{ e }}</li>
+      </ul>
+    </div> -->
+
+    <!-- Common Services -->
+    <!-- <div class="common-section">
+      <h3 class="section-title">Our Services</h3>
+      <ul>
+        <li *ngFor="let s of services">{{ s }}</li>
+      </ul>
+    </div> -->
+  </div>
+</section>

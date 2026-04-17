@@ -1,0 +1,111 @@
+/* Section background spacing */
+.about-wrap {
+  padding: 2rem 0 2.5rem;
+}
+
+/* Card like your reference */
+.about-card {
+  background: #eaf4f8;              /* soft bluish */
+  border-radius: 18px;
+  padding: 2rem 1.25rem;
+}
+
+/* Two-column layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;  /* text : image */
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.about-text h2 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin-bottom: .75rem;
+  color: #123047;
+}
+
+.about-text p {
+  margin: 0 0 .8rem 0;
+  color: #2f3b46;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* small rounded pills */
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin: .5rem 0 0;
+}
+.about-highlights span {
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,.06);
+  padding: .35rem .65rem;
+  border-radius: 999px;
+  font-size: .85rem;
+  font-weight: 600;
+  color: #134e8a;
+}
+
+/* Image block */
+.about-media {
+  position: relative;
+  min-height: 220px;
+}
+.about-media img {
+  width: 100%;
+  max-width: 380px;          /* controls image size on desktop */
+  display: block;
+  margin-left: auto;         /* push to right */
+  border-radius: 16px;       /* matches reference rounded corner */
+}
+
+/* Reduce top gap under navbar if needed */
+:host {
+  display: block;
+  margin-top: 0;
+  padding-top: .5rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;     /* stack */
+  }
+  .about-media img {
+    max-width: 320px;
+    margin: 0 auto;                 /* center on mobile */
+  }
+  .about-card {
+    padding: 1.5rem 1rem;
+  }
+  .about-text h2 { font-size: 1.6rem; }
+}
+
+.about-card.container {
+  max-width: 1220px;   /* wider than default Bootstrap 1140px */
+}
+
+.explore-btn {
+  background-color: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.45rem 1.2rem;
+  border-radius: 50px;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+
+  margin-top: 1rem;   /* ✅ add spacing above */
+  margin-bottom: 0.5rem; /* optional bottom space */
+
+  &:hover {
+    background-color: #0b5ed7;
+    color: #fff;
+    text-decoration: none;
+  }
+}

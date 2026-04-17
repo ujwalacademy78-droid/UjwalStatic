@@ -1,0 +1,45 @@
+.ua-navbar {
+  --ua-accent: #0d6efd; /* Bootstrap primary */
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  
+
+  .navbar-brand img {
+    height: 100px;   /* ✅ Increase from 48px → 60px */
+    max-height: 100px;
+    width: auto;
+    display: block;
+    object-fit: contain; 
+  }
+
+  .nav-link {
+    position: relative;
+    padding: .5rem .75rem;
+    color: #2a2a2a;
+    font-weight: 500;
+    transition: color .15s ease;
+
+    &:hover { color: var(--ua-accent); }
+    &.active { color: var(--ua-accent); }
+
+    &.active::after {
+      content: '';
+      position: absolute;
+      left: 10px;
+      right: 10px;
+      bottom: -6px;
+      height: 2px;
+      background: var(--ua-accent);
+      border-radius: 2px;
+    }
+  }
+}
+
+/* Mobile adjustment */
+@media (max-width: 575.98px) {
+  .ua-navbar .navbar-brand img {
+    height: 70px;   /* Try 100px first */
+  
+} /* smaller logo on very small screens */
+  }
+
