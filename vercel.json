@@ -1,4 +1,5 @@
 {
+  "outputDirectory": "dist/ujwal-academy/browser",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
