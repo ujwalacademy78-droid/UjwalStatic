@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ujwal-academy/browser",
+            "outputPath": "dist",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -76,7 +76,7 @@
         "browser": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ujwal-academy/browser",
+            "outputPath": "dist",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
